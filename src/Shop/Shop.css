@@ -7,8 +7,6 @@
 }
 
 .Shop__item {
-  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
-
   margin: 1rem;
   padding: 5px;
 
@@ -17,6 +15,12 @@
   align-items: center;
 
   cursor: pointer;
+
+  transition: all 0.2s ease-out;
+}
+
+.Shop__item:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .item__image {
