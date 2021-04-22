@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Hero from '../components/Hero.js';
 import Header from '../components/Header.js';
 import useBackground from '../util/change-bg.js';
 
@@ -8,7 +9,11 @@ function Home(props) {
   return (
     <React.Fragment>
       <Header />
-      <h1>Home</h1>
+      <Hero
+        title="Your new tech"
+        subtitle="One click away"
+        button={{ text: 'Shop now' }}
+      />
     </React.Fragment>
   );
 }

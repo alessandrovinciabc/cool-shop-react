@@ -9,8 +9,16 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   font-family: 'Ubuntu Mono', monospace;
   background-repeat: no-repeat;
+  background-position: 25%;
   background-size: cover;
+
+  overflow: auto;
 }
