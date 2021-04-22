@@ -8,12 +8,18 @@ import Item from './Item/Item.js';
 import Cart from './Cart/Cart.js';
 import MissingPage from './MissingPage/MissingPage.js';
 
+import products from './data/products.json';
+
 function App() {
   return (
     <BrowserRouter>
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/shop" exact component={Shop} />
+        <Route
+          path="/shop"
+          exact
+          render={(props) => <Shop {...props} products={products} />}
+        />
         <Route path="/product/:id" exact component={Item} />
         <Route path="/cart" exact component={Cart} />
         <Route path="/*" component={MissingPage} />
