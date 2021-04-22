@@ -10,6 +10,8 @@
 .Header__text {
   color: white;
   background-color: black;
+
+  font-size: 3.4rem;
 }
 
 .Header__navigation {
