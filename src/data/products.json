@@ -23,6 +23,7 @@
     "prices": {
       "previous": 47,
       "current": 34
-    }
+    },
+    "img": "./assets/images/products/watch.jpg"
   }
 ]
