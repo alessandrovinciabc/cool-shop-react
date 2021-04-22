@@ -20,7 +20,11 @@ function App() {
           exact
           render={(props) => <Shop {...props} products={products} />}
         />
-        <Route path="/product/:id" exact component={Item} />
+        <Route
+          path="/product/:id"
+          exact
+          render={(props) => <Item {...props} products={products} />}
+        />
         <Route path="/cart" exact component={Cart} />
         <Route path="/*" component={MissingPage} />
       </Switch>

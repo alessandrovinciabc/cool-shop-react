@@ -1,0 +1,70 @@
+.ItemDisplay {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 80vh;
+}
+
+.ItemDisplay__image {
+  height: 100%;
+  width: 500px;
+  min-width: 350px;
+
+  object-fit: cover;
+}
+
+.ItemDisplay__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  flex-grow: 1;
+
+  height: 150px;
+}
+
+.ItemDisplay__name {
+  font-size: 2.3rem;
+}
+
+.ItemDisplay__prices {
+  display: flex;
+  font-size: 1.4rem;
+}
+
+.ItemDisplay__current {
+  margin-right: 10px;
+}
+
+.ItemDisplay__previous {
+  color: grey;
+  text-decoration: line-through;
+}
+
+.ItemDisplay__input {
+  display: flex;
+}
+
+.Item__number {
+  width: 2.5rem;
+  height: 44.93px;
+  text-align: center;
+
+  margin-right: 10px;
+}
+
+.Item__add {
+  background: none;
+  background-color: black;
+  color: white;
+
+  outline: none;
+  border: none;
+
+  font-size: 1rem;
+
+  padding: 0.8rem 1.3rem;
+
+  cursor: pointer;
+}
