@@ -15,8 +15,8 @@ function Shop(props) {
   let displayProducts = () => {
     return products.map((product) => {
       return (
-        <Link to={`/product/${product.id}`}>
-          <div className="Shop__item" key={product.id}>
+        <Link to={`/product/${product.id}`} key={product.id}>
+          <div className="Shop__item">
             <img src={product.img} alt={product.name} className="item__image" />
             <div className="item__name">{product.name}</div>
             <div className="item__prices">
