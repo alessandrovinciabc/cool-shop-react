@@ -1,0 +1,28 @@
+[
+  {
+    "id": "epic-headphones",
+    "name": "Epic Headphones",
+    "prices": {
+      "previous": 118,
+      "current": 70
+    },
+    "img": "./assets/images/products/headphones.jpg"
+  },
+  {
+    "id": "good-looking-keyboard",
+    "name": "Good Looking Keyboard",
+    "prices": {
+      "previous": 78,
+      "current": 54
+    },
+    "img": "./assets/images/products/keyboard.jpg"
+  },
+  {
+    "id": "nice-watch",
+    "name": "Nice Watch",
+    "prices": {
+      "previous": 47,
+      "current": 34
+    }
+  }
+]
