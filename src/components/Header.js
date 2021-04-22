@@ -7,7 +7,7 @@ import './Header.css';
 function Header(props) {
   return (
     <div className="Header">
-      <h1 className="Header__text">Cool Shop</h1>
+      <h1 className="Header__text">Coolest</h1>
       <div className="Header__navigation">
         <ul className="Navigation">
           <li>
