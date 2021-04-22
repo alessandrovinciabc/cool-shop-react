@@ -1,7 +1,17 @@
 import React from 'react';
 
+import Header from '../components/Header.js';
+
+import useBackground from '../util/change-bg.js';
+
 function MissingPage(props) {
-  return <h1>404 page not found!</h1>;
+  useBackground('');
+  return (
+    <React.Fragment>
+      <Header />
+      <h1>404 page not found!</h1>
+    </React.Fragment>
+  );
 }
 
 export default MissingPage;

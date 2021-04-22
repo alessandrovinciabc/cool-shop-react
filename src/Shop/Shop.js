@@ -1,7 +1,16 @@
 import React from 'react';
 
+import Header from '../components/Header.js';
+import useBackground from '../util/change-bg.js';
+
 function Shop(props) {
-  return <h1>Shop</h1>;
+  useBackground('');
+  return (
+    <React.Fragment>
+      <Header />
+      <h1>Shop</h1>
+    </React.Fragment>
+  );
 }
 
 export default Shop;

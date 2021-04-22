@@ -1,0 +1,45 @@
+.Header {
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  padding: 1rem 2rem;
+}
+
+.Header__text {
+  color: white;
+  background-color: black;
+}
+
+.Header__navigation {
+  width: 300px;
+
+  min-width: 120px;
+
+  display: flex;
+  align-items: center;
+}
+
+.Navigation {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  list-style-type: none;
+}
+
+.Navigation__link {
+  color: white;
+  background-color: black;
+
+  font-size: 1.6rem;
+  text-decoration: none;
+
+  text-transform: uppercase;
+}
+
+.Navigation__link:hover {
+  color: grey;
+}
