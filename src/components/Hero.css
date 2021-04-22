@@ -36,4 +36,16 @@
   padding: 0.8rem 1.3rem;
 
   cursor: pointer;
+
+  transition: all 0.1s ease-out;
+}
+
+.Hero__cta:hover::after {
+  content: '->';
+  margin-left: 0.5rem;
+}
+
+.Hero__cta:hover {
+  background-color: rgb(226, 68, 68);
+  color: white;
 }
