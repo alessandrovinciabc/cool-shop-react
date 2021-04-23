@@ -63,7 +63,6 @@
 }
 
 .Box {
-  min-height: 80vh;
   padding-top: 2rem;
   flex-grow: 1;
   min-width: 350px;
@@ -71,10 +70,15 @@
 }
 
 .Box--right {
+  min-height: 80vh;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .Box--left {
@@ -83,11 +87,14 @@
   justify-content: center;
   align-items: center;
 
-  height: 200px;
+  padding-left: 2rem;
+  padding-right: 2rem;
 
   font-size: 1.6rem;
 
   text-align: center;
+
+  height: fit-content;
 }
 
 .Box--left::after {
