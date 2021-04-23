@@ -87,6 +87,8 @@
 
   padding-left: 2rem;
   padding-right: 2rem;
+
+  flex-basis: 55%;
 }
 
 .Box--left {
@@ -104,6 +106,8 @@
 
   height: fit-content;
   align-self: flex-start;
+
+  flex-basis: 45%;
 }
 
 .Box--left::after {
