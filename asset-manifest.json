@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/cool-shop-react/static/css/main.afd65a1a.chunk.css",
+    "main.js": "/cool-shop-react/static/js/main.26c91863.chunk.js",
+    "main.js.map": "/cool-shop-react/static/js/main.26c91863.chunk.js.map",
+    "runtime-main.js": "/cool-shop-react/static/js/runtime-main.44dbd1b6.js",
+    "runtime-main.js.map": "/cool-shop-react/static/js/runtime-main.44dbd1b6.js.map",
+    "static/js/2.291e603b.chunk.js": "/cool-shop-react/static/js/2.291e603b.chunk.js",
+    "static/js/2.291e603b.chunk.js.map": "/cool-shop-react/static/js/2.291e603b.chunk.js.map",
+    "index.html": "/cool-shop-react/index.html",
+    "static/css/main.afd65a1a.chunk.css.map": "/cool-shop-react/static/css/main.afd65a1a.chunk.css.map",
+    "static/js/2.291e603b.chunk.js.LICENSE.txt": "/cool-shop-react/static/js/2.291e603b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.44dbd1b6.js",
+    "static/js/2.291e603b.chunk.js",
+    "static/css/main.afd65a1a.chunk.css",
+    "static/js/main.26c91863.chunk.js"
+  ]
+}
