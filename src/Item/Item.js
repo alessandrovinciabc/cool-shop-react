@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Header from '../components/Header.js';
 
@@ -8,6 +8,7 @@ import './Item.css';
 
 function Item({ match, products }) {
   useBackground('');
+  let [qty, setQty] = useState(1);
 
   let requestedId = match.params.id;
 
@@ -16,6 +17,12 @@ function Item({ match, products }) {
   };
 
   let product = getProductById(requestedId);
+
+  let onQtyChange = (e) => {
+    let newValue = +e.target.value;
+    if (newValue <= 0 || newValue > 99) return;
+    setQty(newValue);
+  };
 
   return (
     <React.Fragment>
@@ -43,7 +50,8 @@ function Item({ match, products }) {
               min="1"
               max="99"
               autoComplete="off"
-              value="1"
+              value={qty}
+              onChange={onQtyChange}
             />
             <button className="Item__add">Add To Cart</button>
           </div>
