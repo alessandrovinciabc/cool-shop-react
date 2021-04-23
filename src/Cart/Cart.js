@@ -31,7 +31,11 @@ function Cart({ products, cart, handler }) {
     return (
       <div className="Entry" key={entry.id}>
         <Link to={`/product/${entry.id}`}>
-          <img className="Entry__image" src={product.img} alt="" />
+          <img
+            className="Entry__image"
+            src={`${process.env.PUBLIC_URL}${product.img}`}
+            alt=""
+          />
         </Link>
         <div className="Entry__details">
           <div className="Entry__name">

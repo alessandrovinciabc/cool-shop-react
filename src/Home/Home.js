@@ -5,7 +5,7 @@ import Header from '../components/Header.js';
 import useBackground from '../util/change-bg.js';
 
 function Home(props) {
-  useBackground('./assets/images/home-bg.jpg');
+  useBackground(`${process.env.PUBLIC_URL}/assets/images/home-bg.jpg`);
   return (
     <React.Fragment>
       <Header />

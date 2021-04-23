@@ -35,7 +35,7 @@ function Item({ history, match, products, handler }) {
       <div className="ItemDisplay">
         <img
           className="ItemDisplay__image"
-          src={product.img}
+          src={`${process.env.PUBLIC_URL}${product.img}`}
           alt={product.name}
         />
         <div className="ItemDisplay__form">

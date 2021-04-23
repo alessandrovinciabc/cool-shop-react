@@ -4,7 +4,7 @@
 
 Shop concept website. The user can choose items from the shop and add them to their cart. The aim of this project is to get practice building a multi-page web app with React Router.
 
-[Live Preview](#)
+[Live Preview](https://alessandrovinciabc.github.io/cool-shop-react/)
 
 ## Technologies
 
