@@ -43,10 +43,15 @@ function Cart({ products, cart, handler }) {
             onChange={(e) => {
               let newQty = e.target.value;
               if (+newQty <= 0 || +newQty > 99) return;
-              handler(entry.id, +newQty);
+              handler.input(entry.id, +newQty);
             }}
           />
-          <button className="Entry__remove"></button>
+          <button
+            className="Entry__remove"
+            onClick={() => {
+              handler.remove(entry.id);
+            }}
+          ></button>
         </div>
       </div>
     );

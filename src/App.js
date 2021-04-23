@@ -42,6 +42,17 @@ function App() {
     });
   };
 
+  let removeFromCart = (id) => {
+    setCart((previous) => {
+      let copy = JSON.parse(JSON.stringify(previous));
+      let index = copy.findIndex((el) => id === el.id);
+
+      copy.splice(index, 1);
+
+      return copy;
+    });
+  };
+
   return (
     <BrowserRouter>
       <Switch>
@@ -66,7 +77,7 @@ function App() {
               {...props}
               cart={cart}
               products={products}
-              handler={changeQuantity}
+              handler={{ input: changeQuantity, remove: removeFromCart }}
             />
           )}
         />
