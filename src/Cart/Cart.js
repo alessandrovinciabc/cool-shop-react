@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import Header from '../components/Header.js';
-
 import useBackground from '../util/change-bg.js';
 
 import './Cart.css';
@@ -67,29 +65,26 @@ function Cart({ products, cart, handler }) {
   };
 
   return (
-    <React.Fragment>
-      <Header />
-      <div className="Boxes">
-        <div className="Box Box--left">
-          <h1>Your shopping cart</h1>
-        </div>
-        <div className="Box Box--right">
-          {cart.map((product) => {
-            return displayCartEntry(product);
-          })}
-          {cart.length > 0 ? (
-            <React.Fragment>
-              <div className="Total">
-                Total: <span className="Total__price">${total}</span>
-              </div>
-              <button className="Checkout">Checkout</button>
-            </React.Fragment>
-          ) : (
-            <h2>Nothing here!</h2>
-          )}
-        </div>
+    <div className="Boxes">
+      <div className="Box Box--left">
+        <h1>Your shopping cart</h1>
       </div>
-    </React.Fragment>
+      <div className="Box Box--right">
+        {cart.map((product) => {
+          return displayCartEntry(product);
+        })}
+        {cart.length > 0 ? (
+          <React.Fragment>
+            <div className="Total">
+              Total: <span className="Total__price">${total}</span>
+            </div>
+            <button className="Checkout">Checkout</button>
+          </React.Fragment>
+        ) : (
+          <h2>Nothing here!</h2>
+        )}
+      </div>
+    </div>
   );
 }
 

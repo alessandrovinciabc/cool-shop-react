@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Header from '../components/Header.js';
 import useBackground from '../util/change-bg.js';
 
 import { Link } from 'react-router-dom';
@@ -33,12 +32,7 @@ function Shop(props) {
     });
   };
 
-  return (
-    <React.Fragment>
-      <Header />
-      <div className="Shop__container">{displayProducts()}</div>
-    </React.Fragment>
-  );
+  return <div className="Shop__container">{displayProducts()}</div>;
 }
 
 export default Shop;

@@ -30,41 +30,36 @@ function Item({ history, match, products, handler }) {
   };
 
   return (
-    <React.Fragment>
-      <Header />
-      <div className="ItemDisplay">
-        <img
-          className="ItemDisplay__image"
-          src={`${process.env.PUBLIC_URL}${product.img}`}
-          alt={product.name}
-        />
-        <div className="ItemDisplay__form">
-          <div className="ItemDisplay__name">{product.name}</div>
-          <div className="ItemDisplay__prices">
-            <div className="ItemDisplay__current">
-              ${product.prices.current}
-            </div>
-            <div className="ItemDisplay__previous">
-              ${product.prices.previous}
-            </div>
-          </div>
-          <div className="ItemDisplay__input">
-            <input
-              className="Item__number"
-              type="number"
-              min="1"
-              max="99"
-              autoComplete="off"
-              value={qty}
-              onChange={onQtyChange}
-            />
-            <button className="Item__add" onClick={handleAddToCart}>
-              Add To Cart
-            </button>
+    <div className="ItemDisplay">
+      <img
+        className="ItemDisplay__image"
+        src={`${process.env.PUBLIC_URL}${product.img}`}
+        alt={product.name}
+      />
+      <div className="ItemDisplay__form">
+        <div className="ItemDisplay__name">{product.name}</div>
+        <div className="ItemDisplay__prices">
+          <div className="ItemDisplay__current">${product.prices.current}</div>
+          <div className="ItemDisplay__previous">
+            ${product.prices.previous}
           </div>
         </div>
+        <div className="ItemDisplay__input">
+          <input
+            className="Item__number"
+            type="number"
+            min="1"
+            max="99"
+            autoComplete="off"
+            value={qty}
+            onChange={onQtyChange}
+          />
+          <button className="Item__add" onClick={handleAddToCart}>
+            Add To Cart
+          </button>
+        </div>
       </div>
-    </React.Fragment>
+    </div>
   );
 }
 

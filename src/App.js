@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
+import Header from './components/Header.js';
 import Home from './Home/Home.js';
 import Shop from './Shop/Shop.js';
 import Item from './Item/Item.js';
@@ -12,6 +13,24 @@ import products from './data/products.json';
 
 function App() {
   let [cart, setCart] = useState([]);
+  let [quantity, setQuantity] = useState(0);
+
+  let getQuantity = () => {
+    setCart((cart) => {
+      let totalQuantity = cart.reduce(
+        (total, element) => total + element.quantity,
+        0
+      );
+
+      setQuantity(totalQuantity);
+
+      return cart;
+    });
+  };
+
+  useEffect(() => {
+    getQuantity();
+  }, [cart]);
 
   let addToCart = (id, quantity) => {
     let exists = products.filter((product) => product.id === id);
@@ -55,6 +74,10 @@ function App() {
 
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <Route
+        path="/"
+        component={(props) => <Header {...props} quantity={quantity} />}
+      />
       <Switch>
         <Route path="/" exact component={Home} />
         <Route

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import './Header.css';
 
-function Header(props) {
+function Header({ quantity }) {
   return (
     <div className="Header">
       <h1 className="Header__text">Coolest</h1>
@@ -22,7 +22,7 @@ function Header(props) {
           </li>
           <li>
             <Link className="Navigation__link" to="/cart">
-              Cart
+              Cart({quantity > 99 ? '99+' : quantity})
             </Link>
           </li>
         </ul>
