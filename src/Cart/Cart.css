@@ -14,6 +14,10 @@
   font-size: 1.4rem;
 }
 
+.Entry__name:hover > a {
+  color: rgb(226, 68, 68);
+}
+
 .Entry__image {
   height: 150px;
   width: 150px;

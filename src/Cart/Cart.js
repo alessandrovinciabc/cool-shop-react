@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import Header from '../components/Header.js';
 
@@ -29,9 +30,13 @@ function Cart({ products, cart, handler }) {
     let product = getProduct(entry.id, products);
     return (
       <div className="Entry" key={entry.id}>
-        <img className="Entry__image" src={product.img} alt="" />
+        <Link to={`/product/${entry.id}`}>
+          <img className="Entry__image" src={product.img} alt="" />
+        </Link>
         <div className="Entry__details">
-          <div className="Entry__name">{product.name}</div>
+          <div className="Entry__name">
+            <Link to={`/product/${entry.id}`}>{product.name}</Link>
+          </div>
           <div className="Entry__price">${product.prices.current}</div>
         </div>
 
