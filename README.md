@@ -12,6 +12,14 @@ Shop concept website. The user can choose items from the shop and add them to th
 - React
 - React Router
 
+## Screenshots
+
+[![Screenshot-2021-04-23-Cool-Shop.png](https://i.postimg.cc/d0x4k55B/Screenshot-2021-04-23-Cool-Shop.png)](https://postimg.cc/7CSgjn8G)
+
+[![coolshop2.png](https://i.postimg.cc/52pP14vD/coolshop2.png)](https://postimg.cc/zybwF1xk)
+
+[![Screenshot-2021-04-23-Cool-Shop-1.png](https://i.postimg.cc/nLz3hyGr/Screenshot-2021-04-23-Cool-Shop-1.png)](https://postimg.cc/K16P9sVh)
+
 ## How to use
 
 In the project directory, you can run:
