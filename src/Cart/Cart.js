@@ -69,9 +69,12 @@ function Cart({ products, cart, handler }) {
             return displayCartEntry(product);
           })}
           {cart.length > 0 ? (
-            <div className="Total">
-              Total: <span className="Total__price">${total}</span>
-            </div>
+            <React.Fragment>
+              <div className="Total">
+                Total: <span className="Total__price">${total}</span>
+              </div>
+              <button className="Checkout">Checkout</button>
+            </React.Fragment>
           ) : (
             <h2>Nothing here!</h2>
           )}

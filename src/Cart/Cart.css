@@ -117,3 +117,25 @@
 .Total__price {
   font-size: 2rem;
 }
+
+.Checkout {
+  margin-bottom: 3rem;
+
+  background: none;
+  background-color: black;
+  color: white;
+  outline: none;
+  border: none;
+
+  font-size: 1rem;
+
+  padding: 0.8rem 1.3rem;
+
+  cursor: pointer;
+
+  transition: all 0.1s ease-out;
+}
+
+.Checkout:hover {
+  background-color: rgb(226, 68, 68);
+}
