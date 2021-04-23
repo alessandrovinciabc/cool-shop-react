@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Header from '../components/Header.js';
 
@@ -10,13 +10,23 @@ function Cart({ products, cart }) {
   useBackground('');
   let [total, setTotal] = useState(0);
 
-  let getProduct = (id) => {
-    let product = products.find((product) => id === product.id);
+  let getProduct = (id, where) => {
+    let product = where.find((product) => id === product.id);
     return product;
   };
 
+  useEffect(() => {
+    let total = cart.reduce((accumulator, el) => {
+      let quantity = el.quantity;
+      let price = getProduct(el.id, products).prices.current;
+
+      return accumulator + quantity * price;
+    }, 0);
+    setTotal(total);
+  }, [cart, products]);
+
   let displayCartEntry = (entry) => {
-    let product = getProduct(entry.id);
+    let product = getProduct(entry.id, products);
     return (
       <div className="Entry" key={entry.id}>
         <img className="Entry__image" src={product.img} alt="" />
