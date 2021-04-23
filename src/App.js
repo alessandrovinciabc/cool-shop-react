@@ -48,7 +48,11 @@ function App() {
             <Item {...props} products={products} handler={addToCart} />
           )}
         />
-        <Route path="/cart" exact component={Cart} />
+        <Route
+          path="/cart"
+          exact
+          component={(props) => <Cart {...props} cart={cart} />}
+        />
         <Route path="/*" component={MissingPage} />
       </Switch>
     </BrowserRouter>

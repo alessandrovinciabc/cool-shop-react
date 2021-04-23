@@ -6,7 +6,7 @@ import useBackground from '../util/change-bg.js';
 
 import './Item.css';
 
-function Item({ match, products, handler }) {
+function Item({ history, match, products, handler }) {
   useBackground('');
   let [qty, setQty] = useState(1);
 
@@ -26,6 +26,7 @@ function Item({ match, products, handler }) {
 
   let handleAddToCart = () => {
     handler(product.id, qty);
+    history.push('/cart');
   };
 
   return (
