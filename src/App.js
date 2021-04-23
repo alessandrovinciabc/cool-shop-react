@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
@@ -11,6 +11,27 @@ import MissingPage from './MissingPage/MissingPage.js';
 import products from './data/products.json';
 
 function App() {
+  let [cart, setCart] = useState([]);
+
+  let addToCart = (id, quantity) => {
+    let exists = products.filter((product) => product.id === id);
+    if (!exists) throw new Error('Product does not exist.');
+
+    setCart((previous) => {
+      let copy = JSON.parse(JSON.stringify(previous));
+
+      let previouslyAdded = cart.findIndex((entry) => entry.id === id);
+      if (previouslyAdded !== -1) {
+        copy[previouslyAdded].quantity += quantity;
+        if (copy[previouslyAdded].quantity > 99) return previous;
+      } else {
+        copy.push({ id, quantity });
+      }
+
+      return copy;
+    });
+  };
+
   return (
     <BrowserRouter>
       <Switch>
@@ -23,7 +44,9 @@ function App() {
         <Route
           path="/product/:id"
           exact
-          render={(props) => <Item {...props} products={products} />}
+          render={(props) => (
+            <Item {...props} products={products} handler={addToCart} />
+          )}
         />
         <Route path="/cart" exact component={Cart} />
         <Route path="/*" component={MissingPage} />

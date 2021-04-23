@@ -6,7 +6,7 @@ import useBackground from '../util/change-bg.js';
 
 import './Item.css';
 
-function Item({ match, products }) {
+function Item({ match, products, handler }) {
   useBackground('');
   let [qty, setQty] = useState(1);
 
@@ -22,6 +22,10 @@ function Item({ match, products }) {
     let newValue = +e.target.value;
     if (newValue <= 0 || newValue > 99) return;
     setQty(newValue);
+  };
+
+  let handleAddToCart = () => {
+    handler(product.id, qty);
   };
 
   return (
@@ -53,7 +57,9 @@ function Item({ match, products }) {
               value={qty}
               onChange={onQtyChange}
             />
-            <button className="Item__add">Add To Cart</button>
+            <button className="Item__add" onClick={handleAddToCart}>
+              Add To Cart
+            </button>
           </div>
         </div>
       </div>
