@@ -1,0 +1,110 @@
+.Entry {
+  display: flex;
+  width: 100%;
+  min-width: 320px;
+
+  align-items: center;
+
+  margin: 2rem;
+}
+
+.Entry__name {
+  padding-bottom: 5px;
+  border-bottom: 2px dotted grey;
+  font-size: 1.4rem;
+}
+
+.Entry__image {
+  height: 150px;
+  width: 150px;
+  flex-shrink: 0;
+
+  object-fit: contain;
+}
+
+.Entry__controls {
+  margin-left: auto;
+  margin-right: 2rem;
+
+  display: flex;
+  align-items: center;
+}
+
+.Entry__qty {
+  width: 2.5rem;
+  height: 44.93px;
+
+  text-align: center;
+}
+
+.Entry__remove {
+  height: 44.93px;
+  width: 2.5rem;
+  border: 0;
+  background: none;
+
+  font-size: 1rem;
+
+  cursor: pointer;
+}
+
+.Entry__remove::after {
+  display: inline-block;
+  content: 'X';
+  transform: scaleX(1.5);
+}
+
+.Boxes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  width: 100%;
+}
+
+.Box {
+  min-height: 80vh;
+  padding-top: 2rem;
+  flex-grow: 1;
+  min-width: 350px;
+  flex-basis: 50%;
+}
+
+.Box--right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Box--left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 200px;
+
+  font-size: 1.6rem;
+
+  text-align: center;
+}
+
+.Box--left::after {
+  content: '';
+
+  border-bottom: 2px solid black;
+  margin-top: 2rem;
+
+  width: 3rem;
+}
+
+.Total {
+  font-size: 1.2rem;
+
+  margin-top: 2rem;
+}
+
+.Total__price {
+  font-size: 2rem;
+}

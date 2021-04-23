@@ -51,7 +51,9 @@ function App() {
         <Route
           path="/cart"
           exact
-          component={(props) => <Cart {...props} cart={cart} />}
+          component={(props) => (
+            <Cart {...props} cart={cart} products={products} />
+          )}
         />
         <Route path="/*" component={MissingPage} />
       </Switch>
