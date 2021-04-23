@@ -32,6 +32,16 @@ function App() {
     });
   };
 
+  let changeQuantity = (id, newQty) => {
+    setCart((previous) => {
+      let copy = JSON.parse(JSON.stringify(previous));
+      let index = copy.findIndex((el) => id === el.id);
+      copy[index].quantity = newQty;
+
+      return copy;
+    });
+  };
+
   return (
     <BrowserRouter>
       <Switch>
@@ -52,7 +62,12 @@ function App() {
           path="/cart"
           exact
           component={(props) => (
-            <Cart {...props} cart={cart} products={products} />
+            <Cart
+              {...props}
+              cart={cart}
+              products={products}
+              handler={changeQuantity}
+            />
           )}
         />
         <Route path="/*" component={MissingPage} />

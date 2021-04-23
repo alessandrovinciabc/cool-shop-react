@@ -6,7 +6,7 @@ import useBackground from '../util/change-bg.js';
 
 import './Cart.css';
 
-function Cart({ products, cart }) {
+function Cart({ products, cart, handler }) {
   useBackground('');
   let [total, setTotal] = useState(0);
 
@@ -36,7 +36,16 @@ function Cart({ products, cart }) {
         </div>
 
         <div className="Entry__controls">
-          <input className="Entry__qty" type="number" value={entry.quantity} />
+          <input
+            className="Entry__qty"
+            type="number"
+            value={entry.quantity}
+            onChange={(e) => {
+              let newQty = e.target.value;
+              if (+newQty <= 0 || +newQty > 99) return;
+              handler(entry.id, +newQty);
+            }}
+          />
           <button className="Entry__remove"></button>
         </div>
       </div>
